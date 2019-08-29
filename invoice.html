@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: "Inconsolata", monospace;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .address {
+            padding-right: 250px;
+        }
+
+        .address p {
+            margin: 0px;
+            font-size: 12px;
+        }
+
+        .container {
+            margin: 10px;
+            padding: 20px 150px 20px 150px;
+        }
+
+        .logo {
+            width: 15%;
+            margin-right: 30px;
+            align-self: center;
+        }
+
+        .invoice-number {
+            width: 25%;
+            margin-left: 30px;
+            align-self: center;
+        }
+
+        img {
+            width: 100px;
+        }
+
+        .date {
+            width: 15%;
+            margin-left: 10px;
+        }
+
+        .divider {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+        .table-wrapper-shipping {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 12px;
+        }
+
+        th {
+            padding-left: 10px;
+            height: 30px;
+            vertical-align: center;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .date-order {
+            width: 70%;
+            font-size: 12px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="{{.Image}}" />
+            </div>
+            <div class="address">
+                <h4>Golang Inc.</h4>
+                <small>
+                    Universe street
+                </small>
+            </div>
+            <div class="invoice-number">
+                <p style="margin: 0;">Invoice </br> No. {{.InvoiceNo}}</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="table-wrapper-shipping">
+            <div class="date-order">
+                <p>Date :{{.Date}}</p>
+                <p>Due Date : {{.DueDate}}</p>
+                <p>Delivery Date : {{.DeliveryDate}}</p>
+                <p>Payment Method : {{.PaymentMethod}}</p>
+            </div>
+        </div>
+        <div class="table-wrapper" style="margin-bottom: 10px;">
+            <table>
+                <tr>
+                    <th>ITEM</th>
+                    <th>PRICE</th>
+                    <th>QTY</th>
+                    <th>SUBTOTAL</th>
+                </tr>
+                {{range .Product}}
+                <tr>
+                    <td>{{.Item}}</td>
+                    <td>{{.Price}}</td>
+                    <td>{{.Qty}}</td>
+                    <td>{{.Subtotal}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+github.com/SebastiaanKlippert/go-wkhtmltopdf v1.4.1 h1:FE2j8S+Vc940yzOJRVzIXqZ5HPU8Q1uCp/OCqpn6Fn0=
+github.com/SebastiaanKlippert/go-wkhtmltopdf v1.4.1/go.mod h1:znvMDEscpKbLTNRORqvA76YzfiCQBqtumbeqA/BI1fQ=
+github.com/aws/aws-sdk-go v1.23.11 h1:fTq1xdeDdCwUfBA64QHk1b5HJfWauac36LvtWlk0pEw=
+github.com/aws/aws-sdk-go v1.23.11/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
+github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af h1:pmfjZENx5imkbgOkpRUYLnmbU7UEFbjtDA2hxJ1ichM=
+github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
